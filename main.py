@@ -5,6 +5,14 @@ def int_to_roman(num):
     :param num: Integer value between 1 and 3999 inclusive.
     :return: A string representing the Roman numeral of the integer.
     """
+    if type(num)==int:
+            if 3999>=num>=1:
+               pass
+            else:
+               return "the input is not valid"
+    else:
+        return "the input is not valid"
+   
     strg = ""
     a = 1000
     while num > 0 and a != 0:
@@ -42,3 +50,4 @@ def int_to_roman(num):
         num = num - (i*a)
         a = a // 10
     return strg
+
